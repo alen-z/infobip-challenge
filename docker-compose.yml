@@ -1,0 +1,15 @@
+version: "3"
+services:
+  message-processor:
+    image: ec2-35-177-100-87.eu-west-2.compute.amazonaws.com:8081/docker-local/message-processor:latest
+    networks:
+      - staging
+  message-gateway:
+    image: ec2-35-177-100-87.eu-west-2.compute.amazonaws.com:8081/docker-local/message-gateway:latest
+    ports:
+      - 8080:8080
+    networks:
+      - staging
+networks:
+  staging:
+    external: true
