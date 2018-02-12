@@ -6,7 +6,7 @@ Add webhook to you messaging-example GitHub repository. Repository used for this
 ```
 http://ec2-35-176-85-120.eu-west-2.compute.amazonaws.com:8080/git/notifyCommit?url=https://github.com/alen-z/messaging-example.git
 ```
-Change Git Repository URL in [Jenkins pipeline](http://ec2-35-176-85-120.eu-west-2.compute.amazonaws.com:8080/job/messaging-example/configure) to fit URL of your repository. Change gateway and processor `localhost` to <code>rabbitmq</code>.
+Change Git Repository URL in [Jenkins pipeline](http://ec2-35-176-85-120.eu-west-2.compute.amazonaws.com:8080/job/messaging-example-v1/configure) to fit URL of your repository. Change gateway and processor `localhost` to <code>rabbitmq</code>.
 ### messaging-example/message-gateway/src/main/webapp/WEB-INF/web.xml
 ```xml
 <init-param>
@@ -110,4 +110,4 @@ docker service create --name message-gateway --replicas 1 --network staging --wi
 `message-processor` accepts optional `JAR_FILENAME` enviromental variable. Please refer to [Jenkins pipline configuration](http://ec2-35-176-85-120.eu-west-2.compute.amazonaws.com:8080/job/messaging-example/configure) for more info.
 
 ## RequestBin
-While testing [requestb.in](https://requestb.in/1bus2v81?inspect), sometimes I encountered unavailable application (Heroku PaaS) and Internal Server Error so be advised that this can break the build success status. It can be addressed with ping prior to sending the request.
+While testing [requestb.in](https://requestb.in/175v6me1?inspect), sometimes I encountered unavailable application (Heroku PaaS) and Internal Server Error so be advised that this can break the build success status. It can be addressed with ping prior to sending the request.
