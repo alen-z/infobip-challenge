@@ -107,7 +107,7 @@ Jenkins uses remote SSH command execution plugin "Publish over SSH" to start ser
 docker service create --name message-processor --replicas 1 --network staging --with-registry-auth ec2-35-177-100-87.eu-west-2.compute.amazonaws.com:8081/docker-local/message-processor:latest
 docker service create --name message-gateway --replicas 1 --network staging --with-registry-auth --publish published=8080,target=8080 ec2-35-177-100-87.eu-west-2.compute.amazonaws.com:8081/docker-local/message-gateway:latest
 ```
-`message-processor` accepts optional `JAR_FILENAME` enviromental variable. Please refer to [Jenkins pipline configuration](http://ec2-35-176-85-120.eu-west-2.compute.amazonaws.com:8080/job/messaging-example/configure) for more info.
+`message-processor` accepts optional `JAR_FILENAME` enviromental variable. Please refer to [Jenkins pipline configuration](http://ec2-35-176-85-120.eu-west-2.compute.amazonaws.com:8080/job/messaging-example-v1/configure) for more info.
 
 ## RequestBin
 While testing [requestb.in](https://requestb.in/175v6me1?inspect), sometimes I encountered unavailable application (Heroku PaaS) and Internal Server Error so be advised that this can break the build success status. It can be addressed with ping prior to sending the request.
