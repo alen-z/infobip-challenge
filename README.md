@@ -20,7 +20,10 @@ Change Git Repository URL in [Jenkins pipeline](http://ec2-35-176-85-120.eu-west
 queue.host=rabbitmq
 ```
 
-Push new commit and voilà.
+Push new commit and voilà. `/message` endpoint is accessible at:
+```
+http://ec2-35-177-73-225.eu-west-2.compute.amazonaws.com:8080
+```
 ## AWS EC2 instance access
 Private key to access all instances is available as .pem.txt file from this repository. Feel free to check them out (side note: if you install miners we share the profits) even though I think this README describes majority, if not all, of the steps taken to build the pipeline. Connection example:
 ```sh
