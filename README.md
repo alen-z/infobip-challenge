@@ -53,8 +53,8 @@ Cool trick alert! Notice <code>-v /var/run/docker.sock:/var/run/docker.sock</cod
 * Add Maven reference in Global Tool Configuration for Maven Artifactory Plugin
 * Add Docker reference in Global Tool Configuration
 * Publish over SSH plugin
-** Add private key info to connect to Swarm manager
-** Allows only file transfer from directory relative to workspace
+  * Add private key info to connect to Swarm manager
+  * Allows only file transfer from directory relative to workspace
 
 ## Artifactory
 Public URL:
@@ -114,3 +114,9 @@ docker service create --name message-gateway --replicas 1 --network staging --wi
 
 ## RequestBin
 While testing [requestb.in](https://requestb.in/175v6me1?inspect), sometimes I encountered unavailable application (Heroku PaaS) and Internal Server Error so be advised that this can break the build success status. It can be addressed with ping prior to sending the request.
+
+## Future work
+* Reverse proxy to Artifactory to secure connection with SSL certificate. This will remove the need for `docker login` insecure connection setup.
+* Use local Dockerfile builds, not public binaries.
+* Use explicit versions (ex. 1.2.3) for system dependencies in Dockerfiles, not tags (ex. lts).
+* Deploy stack in Swarm using docker-compose.yml
