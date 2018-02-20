@@ -56,7 +56,7 @@ Cool trick alert! Notice <code>-v /var/run/docker.sock:/var/run/docker.sock</cod
 ** Add private key info to connect to Swarm manager
 ** Allows only file transfer from directory relative to workspace
 
-# Artifactory
+## Artifactory
 Public URL:
 ```
 http://ec2-35-177-100-87.eu-west-2.compute.amazonaws.com:8081
@@ -69,7 +69,7 @@ docker run --name artifactory --restart=always -d -v /home/admin/artifactory:/va
 ```
 Since AWS EC2 t2.micro instances with small amount of RAM memory (1GB) are used, Artifactory crashed on me few times. Therefore <code>--restart=always</code> is introduced even though in production it is pretty common to use this flag regardless of this problem. To ensure Docker Swarm will work with Artifactory set `Admin - HTTP Settings` to `Repository Path`.
 
-# Docker Swarm
+## Docker Swarm
 Docker Swarm is deployed on three AWS EC2 instances. 1 manager and 2 slaves.
 ```sh
 ssh -i "infobip.pem.txt" admin@ec2-35-177-73-225.eu-west-2.compute.amazonaws.com # swarm master
