@@ -121,5 +121,6 @@ While testing [requestb.in](https://requestb.in/175v6me1?inspect), sometimes I e
 * Use explicit versions (ex. 1.2.3) for system dependencies in Dockerfiles, not tags (ex. lts).
 * Deploy stack in Swarm using docker-compose.yml
 * Enable promoting artifacts for production
-* Expand Jenkins pipeline review report: coding standards and dependency analysis, code duplication...
+* Expand Jenkins pipeline review report: coding standards and dependency analysis, code duplication, coverage...
 * Parameterize application variables vital to run as Docker container in different environments (ex. queue host)
+* Notify relevant party on broken build
