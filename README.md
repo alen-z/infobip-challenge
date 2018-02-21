@@ -122,3 +122,4 @@ While testing [requestb.in](https://requestb.in/175v6me1?inspect), sometimes I e
 * Deploy stack in Swarm using docker-compose.yml
 * Enable promoting artifacts for production
 * Expand Jenkins pipeline review report: coding standards and dependency analysis, code duplication...
+* Parameterize application variables vital to run as Docker container in different environments (ex. queue host)
